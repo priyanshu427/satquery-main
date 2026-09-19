@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "SATQUERY AI"
+description = "A professional Earth-observation intelligence frontend for natural-language satellite investigation, evidence review, change detection, datasets, reports, and model monitoring."
+version = "1.0.0"
+id = "artifacts/satquery-ai"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18896
+
+[services.development]
+run = "pnpm --filter @workspace/satquery-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/satquery-ai", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/satquery-ai/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18896"
+BASE_PATH = "/"

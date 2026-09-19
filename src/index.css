@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ==========================================================================
+   SATQUERY AI — EARTH OBSERVATION & SCIENTIFIC GIS DESIGN SYSTEM
+   Warm stone palette: #F3F1EA · Surface: #FFFFFF · Text: #17201D
+   Primary: Deep Forest Green (#183B2B) · Accent: Muted Orange (#C25E2E)
+   Highlight: Restrained Satellite Cyan (#0284C7)
+   ========================================================================== */
+
+:root {
+  --bg-stone: #F3F1EA;
+  --surface-white: #FFFFFF;
+  --surface-subtle: #ECE9E0;
+  --border-rule: #DCD7CB;
+  --border-strong: #BCB6A8;
+  
+  --text-main: #17201D;
+  --text-muted: #69736D;
+  --text-faint: #919B95;
+  
+  --forest-green: #183B2B;
+  --forest-green-hover: #122C20;
+  --forest-green-soft: #E5EFE9;
+  
+  --muted-orange: #C25E2E;
+  --muted-orange-hover: #A64E23;
+  --muted-orange-soft: #FAECE4;
+  
+  --satellite-cyan: #0284C7;
+  --satellite-cyan-soft: #E0F2FE;
+
+  /* Radix UI & generic token mappings */
+  --background: 46 22% 94%;       /* #F3F1EA */
+  --foreground: 164 16% 11%;      /* #17201D */
+  --border: 44 19% 83%;          /* #DCD7CB */
+  --input: 44 19% 83%;
+  --ring: 151 42% 16%;           /* #183B2B */
+
+  --card: 0 0% 100%;             /* #FFFFFF */
+  --card-foreground: 164 16% 11%;
+  --card-border: 44 19% 83%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 164 16% 11%;
+  --popover-border: 44 19% 83%;
+
+  --primary: 151 42% 16%;        /* Forest green */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 46 16% 90%;       /* #ECE9E0 */
+  --secondary-foreground: 164 16% 11%;
+
+  --muted: 46 16% 91%;
+  --muted-foreground: 147 5% 43%; /* #69736D */
+
+  --accent: 20 62% 47%;          /* Muted orange */
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+
+  --radius: 2px;                 /* Crisp precision corners, NOT bubble pills */
+}
+
+/* Optional Dark Mode (Operator Night / Terminal mode) */
+.dark {
+  --bg-stone: #121815;
+  --surface-white: #1A211D;
+  --surface-subtle: #222B25;
+  --border-rule: #2C3831;
+  --border-strong: #3D4F45;
+  
+  --text-main: #EDF1EE;
+  --text-muted: #8E9C93;
+  --text-faint: #637168;
+
+  --forest-green: #2B5A44;
+  --forest-green-hover: #376F54;
+  --forest-green-soft: #172B20;
+
+  --muted-orange: #D96E3D;
+  --muted-orange-hover: #E37B4C;
+  --muted-orange-soft: #2D1A10;
+
+  --satellite-cyan: #38BDF8;
+  --satellite-cyan-soft: #082F49;
+
+  --background: 150 14% 8%;
+  --foreground: 140 10% 94%;
+  --card: 150 12% 12%;
+  --card-foreground: 140 10% 94%;
+  --border: 150 11% 20%;
+  --input: 150 11% 20%;
+  --primary: 151 35% 35%;
+  --primary-foreground: 0 0% 100%;
+  --muted: 150 11% 15%;
+  --muted-foreground: 147 6% 58%;
+}
+
+@layer base {
+  html {
+    background-color: var(--bg-stone);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  body {
+    min-width: 320px;
+    background-color: var(--bg-stone);
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Scientific & Technical GIS Typography & Grids */
+.font-mono-tech {
+  font-family: 'DM Mono', monospace;
+  letter-spacing: -0.02em;
+}
+
+.font-serif-editorial {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+/* Precision GIS Panels - Clean thin border, flat surface, zero neon */
+.gis-panel {
+  background-color: var(--surface-white);
+  border: 1px solid var(--border-rule);
+}
+
+.gis-panel-subtle {
+  background-color: var(--surface-subtle);
+  border: 1px solid var(--border-rule);
+}
+
+/* Coordinate graticule overlay for real satellite view */
+.graticule-grid {
+  background-image: 
+    linear-gradient(to right, rgba(23, 32, 29, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 32, 29, 0.08) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.dark .graticule-grid {
+  background-image: 
+    linear-gradient(to right, rgba(237, 241, 238, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(237, 241, 238, 0.08) 1px, transparent 1px);
+}
+
+/* Technical Label Pill */
+.tech-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 6px;
+  border-radius: 2px;
+  border: 1px solid var(--border-rule);
+  background: var(--surface-subtle);
+  color: var(--text-muted);
+}
+
+/* Data Table Precision Styling */
+.gis-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.gis-table th {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-rule);
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 500;
+  background-color: var(--surface-subtle);
+}
+
+.gis-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-rule);
+  color: var(--text-main);
+}
+
+.gis-table tr:hover td {
+  background-color: rgba(24, 59, 43, 0.03);
+}
+
+/* Satellite Imagery Surface Simulation */
+.satellite-ortho-noida {
+  background-color: #2F3931;
+  background-image:
+    radial-gradient(circle at 45% 42%, rgba(200, 90, 23, 0.45), transparent 45%),
+    radial-gradient(circle at 65% 58%, rgba(2, 132, 199, 0.35), transparent 40%),
+    radial-gradient(circle at 30% 70%, rgba(34, 197, 94, 0.35), transparent 35%),
+    linear-gradient(135deg, #1C2621 0%, #2F3931 50%, #243029 100%);
+}
+
+.satellite-ortho-baseline {
+  background-color: #243029;
+  background-image:
+    radial-gradient(circle at 40% 45%, rgba(34, 197, 94, 0.55), transparent 40%),
+    radial-gradient(circle at 70% 65%, rgba(234, 179, 8, 0.3), transparent 35%),
+    linear-gradient(135deg, #18221D 0%, #243029 50%, #1F2C24 100%);
+}
+
+.satellite-radar-sar {
+  background-color: #1A1F22;
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.55), transparent 25%),
+    radial-gradient(circle at 35% 40%, rgba(2, 132, 199, 0.45), transparent 30%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.04) 0 2px, transparent 2px 6px);
+}
+
+/* Range input styling */
+input[type="range"] {
+  accent-color: var(--forest-green);
+}
