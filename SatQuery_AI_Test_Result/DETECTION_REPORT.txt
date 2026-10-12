@@ -1,0 +1,32 @@
+SATQUERY AI — GROUNDINGDINO TEST REPORT
+============================================================
+Input image: test image (1).jfif
+Image size: 529 x 378
+Total detections: 19
+Unique classes: 12
+
+DETECTIONS
+------------------------------------------------------------
+mountain hill | confidence = 0.3979
+river lake water | confidence = 0.4096
+bridge solar panel | confidence = 0.4534
+river lake water | confidence = 0.2706
+construction site | confidence = 0.3787
+building truck bus storage tank warehouse built - up area | confidence = 0.2858
+mountain hill | confidence = 0.2300
+wind mill | confidence = 0.2210
+wind mill | confidence = 0.3014
+barren land construction site | confidence = 0.2297
+river lake water | confidence = 0.2294
+mountain hill | confidence = 0.2127
+building storage tank mill warehouse | confidence = 0.2036
+car | confidence = 0.2036
+building truck | confidence = 0.2019
+building storage tank warehouse | confidence = 0.2249
+car | confidence = 0.2153
+airplane | confidence = 0.2146
+mountain hill | confidence = 0.2117
+
+NOTE:
+Detection response does not by itself prove accuracy.
+Extra prompts were tested as open-vocabulary concepts.

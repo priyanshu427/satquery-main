@@ -1,0 +1,84 @@
+{
+  "input_image": "test image (1).jfif",
+  "image_width": 529,
+  "image_height": 378,
+  "total_detections": 19,
+  "detections": [
+    {
+      "class": "mountain hill",
+      "confidence": 0.3978523313999176
+    },
+    {
+      "class": "river lake water",
+      "confidence": 0.4096153676509857
+    },
+    {
+      "class": "bridge solar panel",
+      "confidence": 0.4534071981906891
+    },
+    {
+      "class": "river lake water",
+      "confidence": 0.27059176564216614
+    },
+    {
+      "class": "construction site",
+      "confidence": 0.37865129113197327
+    },
+    {
+      "class": "building truck bus storage tank warehouse built - up area",
+      "confidence": 0.285793274641037
+    },
+    {
+      "class": "mountain hill",
+      "confidence": 0.22995641827583313
+    },
+    {
+      "class": "wind mill",
+      "confidence": 0.22099854052066803
+    },
+    {
+      "class": "wind mill",
+      "confidence": 0.301376610994339
+    },
+    {
+      "class": "barren land construction site",
+      "confidence": 0.22966963052749634
+    },
+    {
+      "class": "river lake water",
+      "confidence": 0.2294139713048935
+    },
+    {
+      "class": "mountain hill",
+      "confidence": 0.21268679201602936
+    },
+    {
+      "class": "building storage tank mill warehouse",
+      "confidence": 0.20359860360622406
+    },
+    {
+      "class": "car",
+      "confidence": 0.2035665214061737
+    },
+    {
+      "class": "building truck",
+      "confidence": 0.2019396424293518
+    },
+    {
+      "class": "building storage tank warehouse",
+      "confidence": 0.22493073344230652
+    },
+    {
+      "class": "car",
+      "confidence": 0.21527442336082458
+    },
+    {
+      "class": "airplane",
+      "confidence": 0.214606374502182
+    },
+    {
+      "class": "mountain hill",
+      "confidence": 0.21172574162483215
+    }
+  ]
+}
